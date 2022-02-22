@@ -1,0 +1,312 @@
+<!-- ------------ Below code segment Validates the server session before entering each view page  ----------------------  -->
+
+<!-- ------------ Above code segment Validates the server session before entering each view page  ----------------------  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SessionExpiryPage PMGSY GeoSadak</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link href="/css/sticky-footer-navbar.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+    <link href="/css/carousel.css" rel="stylesheet">
+    <link href="/css/Media.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/fonts.googleapis.css" />
+    <link href="/css/all.css" rel="stylesheet" />
+    <link href="/css/opendata.css" rel="stylesheet" />
+    <script src="/js/all.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+        }
+        .app-footer {
+            position: fixed;
+            bottom: 0;
+
+            border-top: none;
+            width: 100%;
+            background-color:white;
+        }
+        .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 15px!important;
+    margin-left: 15px!important;
+}
+       .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+       .btn-submit {
+    color: #fff!important;
+    background-color: #6a8696;
+    border-color: #576e7b;
+    height: 35px;
+    background-image: linear-gradient(to top,#113c4a,#83adc1);
+}
+
+	/* Make the image fully responsive */
+    .carousel-inner img {
+        width: 100%;
+    }
+
+    h6 {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+
+    .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 0.25rem;
+    }
+        .icon {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            line-height: 50px;
+            font-size: 12px;
+            font-family: sans-serif;
+        }
+.carousel-caption {
+    right: 0;
+    text-align: left;
+
+    max-width: 500px;
+    margin-left: 0px;
+}
+
+        .new-font {
+            font-family:'Segoe UI';
+        }
+
+        .logo {
+            /*font-size: 160%;
+            line-height: 105%;*/
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-weight: normal;
+        }
+
+        .img1 {
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+            border: 0;
+            margin-top: -2px;
+            float: left;
+            padding: 0 15px 0 5px;
+            width: 75px;
+        }
+
+
+
+            .logo a {
+                text-align: left;
+                color: #fff;
+            }
+
+                .logo a strong {
+                    padding-top: 11px;
+                    font-weight: 600;
+                    display: block;
+                    font-size: 80%;
+                }
+
+
+        /*a:active a:visited*/ a:hover {
+            text-decoration: none;
+        }
+        
+    </style>
+
+
+
+</head>
+
+<body class="d-flex flex-column h-100" style="font-family:segeo-UI;overflow-y:auto">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top  custom-navbar" role="navigation">
+            <div class="container-fluid">
+                <div style="width:88%">
+                    <table class="logo">
+                        <tr>
+                            <td id="logo" rel="home" title="Home" role="link">
+                                <img alt="national emblem" src="/images/Emblem.png" class="national_emblem" />
+                                <div class="logoTxt" style="width:100%; line-height: 1.1em; color:#d3d5d5;">
+                                    <span style=" font-size: 100%;  font-weight: bold;">ग्रामीण विकास मंत्रालय  <br /> </span>
+                                    <span style=" font-size: 80%;">भारत सरकार <br /> </span>
+                                    <span style="font-size: 100%;font-weight:700;">Ministry of  Rural Development <br />   </span>
+                                    <span style=" font-size: 80%;">GOVERNMENT OF INDIA</span>
+                                </div>
+                            </td>
+                            <td id="ls" style="margin-left:25%;vertical-align:middle;display:inline-block">
+                                <img style="width:75%;" src="/images/Geo_Sadak.png" />
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+
+                    <button type="submit" class="button" onclick="window.location.href=&#x27;/OpenData&#x27;;">Open Data</button>
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                    &#9776;
+                </button>
+                    <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+                        <ul class="nav navbar-nav navbar-right ml-auto">
+                            <li>
+                                <p class="text-danger" style="background-color:navajowhite">
+                                    Session has Expired! Please Re-login after few minutes
+                                </p>
+                            </li>
+                            <li class="nav-item active">
+                                <a data-toggle="dropdown" class="nav-link dropdown-toggle new-font" href="#">
+                                    <i class="fa1 fa-2x fa-user-circle-o" style="font-size:20px;color:white;font-weight:bold;" aria-hidden="true">  </i>
+                                    Login
+                                </a>
+                                <ul id="logindropdown" class="dropdown-menu form-wrapper">
+                                    <li>
+
+
+                                        <div class="card" style="width:305px;height:200px;margin-right:10px;">
+                                            <div class="card-header" style="background-image: linear-gradient(to top, darkgray, transparent); color:#113c4a;font-size:20px;font-weight:900;height:50px;margin-top:-10px;">
+                                                <a><i class="fa fa-2x fa-user-circle" style="font-size:22px;margin-left:-20px"></i> Sign in</a>
+                                            </div>
+
+                                            <div class="card-body " style="background-color:white;margin-top:10px;">
+                                                <form id="account" method="post">
+
+                                                    <div class="text-danger validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+                                                    <div class="form-group">
+                                                        <div class="input-group ">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true" style="width:16px;height:16px;font-weight:bold"></i></span>
+                                                            </div>
+
+                                                            <input placeholder="Username" autocomplete="off" class="form-control" type="text" data-val="true" data-val-required="The Username field is required." id="Input_Username" name="Input.Username" value="" />
+                                                            <span class="text-danger field-validation-valid" data-valmsg-for="Input.Username" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="input-group ">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
+                                                            </div>
+                                                            <input autocomplete="off" placeholder="Password" class="form-control" type="password" data-val="true" data-val-required="The Password field is required." id="Input_Password" name="Input.Password" />
+                                                            <span class="text-danger field-validation-valid" data-valmsg-for="Input.Password" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group text-center">
+                                                        <button type="submit" class="btn btn-submit" style="height:35px;margin-top:-10px;" formaction="/Identity/Account/Login">Submit</button>
+                                                    </div>
+
+
+                                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8IG6diN4yOhIjVf5rJSjMr7z8fb9HCIEjmbO6LOEPc6TAlPlsXc0sWkxnfbi9R3F1-CgC6i5hhAQjhV08TJm-1iA5zPIOevj8CPg_5CHeoGdYQEQLMNYrS6IdqdFUC35ReL3-9bnboiT8Xn6i6lP7Eg" /></form>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="card-footer text-center  text-white" style="background-color:#f0f1f1;background-image:linear-gradient(to top, #83adc1, transparent); color:#676ba8;font-size:13px;font-weight:bold">Please contact NRIDA/State for credentials</div>
+
+
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+
+
+
+                    </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main role="main" class="pb-3" style="overflow:auto;">
+
+        
+
+
+
+
+<div class="container" style="margin-top:40px">
+    <h1 class="alert-danger">Session has Expired! Please Relogin</h1>
+    
+
+    <span>
+        <a class="alert-info" href="/">Home</a>
+    </span>
+</div>
+
+
+
+
+    </main>
+
+
+    <footer class="app-footer" style="font-size:12px;">
+        <div class="row">
+
+            <div>
+                <div class="col-left">
+                    <a style="margin-right: .5rem;cursor:pointer;color:black" href="https://pmgsy.nic.in/" target="_blank">
+                        <img class="imgnrrda" src="/images/NRRDA3.png" />
+                    </a>
+                    <a target="_new" href="https://cdac.in/" style="cursor:pointer;margin-right: .5rem;">
+                        <img class="imgcdac" src="/images/icons1/footer/CDAC-Logo.png" style="display:inline-block;" />
+                    </a>
+                    <a href="https://digitalindia.gov.in/" target="_blank"><img class="imgdi" src="/images/icons1/footer/Digital india1_80x80.png" style="margin-left:8px;" /></a>
+
+                    <a href="http://www.pmgsy-grris.nic.in/" target="_blank" style="cursor:pointer">
+                        <img class="imggrris" src="/images/icons1/footer/GRISS.png" />
+                    </a>
+                    <a href="http://omms.nic.in/" target="_blank" style="cursor:pointer">
+                        <img class="imgommas" src="/images/icons1/footer/OMMAS.png" target="_blank" style="margin-top:-5px" />
+                    </a>
+                </div>
+            </div>
+            <div style="position:relative;margin-left:auto">
+                <div class="col-right" style="float:right;">
+                    &copy;2020 NRIDA. Developed and maintained by C-DAC Pune
+                    <a target="_new" href="https://cdac.in/" style="cursor:pointer;margin-right: .5rem;">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer> <br />
+   
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+    
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+</body>
+</html>
