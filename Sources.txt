@@ -17,5 +17,6 @@ batch 2 upload:
 batch 3 upload:
 5MB - 10MB
 
-batch 4 upload:
-10MB individual files
+individual uploads:
+Chhattisgarh.zip
+Maharashtra.zip
