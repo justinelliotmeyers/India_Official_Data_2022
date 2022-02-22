@@ -6,3 +6,13 @@ https://geosadak-pmgsy.nic.in/MsFiles/TnC.html
 
 Processing Notes:
 29 individual download files per Layer
+
+batch 1 upload:
+under 1MB
+
+
+batch 2 upload:
+1MB - 5MB
+
+batch 3 upload:
+5MB - 10MB
