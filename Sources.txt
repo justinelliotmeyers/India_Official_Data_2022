@@ -20,3 +20,7 @@ batch 3 upload:
 individual uploads:
 Chhattisgarh.zip
 Maharashtra.zip
+MadhyaPradesh.zip
+Odisha.zip
+
+upload facilities from https://twitter.com/Kyangs_Thang
