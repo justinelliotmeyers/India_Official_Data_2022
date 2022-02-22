@@ -3,3 +3,6 @@ https://geosadak-pmgsy.nic.in/OpenData
 
 Terms and Conditions:
 https://geosadak-pmgsy.nic.in/MsFiles/TnC.html
+
+Processing Notes:
+29 individual download files per Layer
